@@ -1,1 +1,1 @@
-## Frequency response of ZOH and FOH using transfer functions and Pade approximations  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/iitkgp.png" width="3%" />
+## To determine frequency response of zero order hold and first order hold using actual transfer functions and Pade approximations  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="images/iitkgp.png" width="3%" />
