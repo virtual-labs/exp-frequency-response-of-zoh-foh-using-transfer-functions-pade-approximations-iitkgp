@@ -6,7 +6,7 @@
 
 <b>Discipline | <b>Electrical Engineering 
 :--|:--|
-<b> Lab | <b> Digital Control Lab
+<b> Lab | <b> Digital Control Laboratory
 <b> Experiment|     <b> Determine frequency response of zero order hold and first order hold using actual transfer functions and Pade approximations and Exp 1
 
 ### About the Experiment 
