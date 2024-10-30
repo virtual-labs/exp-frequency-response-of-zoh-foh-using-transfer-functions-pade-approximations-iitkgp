@@ -17,6 +17,7 @@ function refresh(){
 document.getElementById('plotbucket').style.display = "none";
 document.getElementById('chartContainer1').style.display = "none";
 document.getElementById('chartContainer2').style.display = "none";
+document.getElementById('exportChart').style.display = "none";
 dataOPPoints=[];	
 dataOPPoints1=[];
 
@@ -184,16 +185,26 @@ document.getElementById('chartContainer2').style.display  = "block";
 	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-		
-	/*chart1.exportChart({format: "jpg"});
-	chart2.exportChart({format: "jpg"});*/
-	
-	window.print();
-	
-	
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
 
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+/* html2canvas($('#plotbucket')[0]).then(function (canvas) {
+                if (navigator.userAgent.indexOf("MSIE ") > 0 ||
+                    navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                    var blob = canvas.msToBlob();
+                    window.navigator.msSaveBlob(blob, 'Test file.png');
+                } else {
+                    var link = document.createElement('a');
+                    link.download = $('#title').text() + '.png';
+                    link.href = canvas.toDataURL("image/png");
+                    link.click();
+                }
+            }
+            )
+	}); */	
+ 
 
 }
 
@@ -259,7 +270,7 @@ function ZOH_bode(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart3 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -292,7 +303,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart3.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -303,7 +314,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart4 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -336,15 +347,28 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart4.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	window.print();
-	
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    }); */
+/* html2canvas($('#plotbucket')[0]).then(function (canvas) {
+                if (navigator.userAgent.indexOf("MSIE ") > 0 ||
+                    navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                    var blob = canvas.msToBlob();
+                    window.navigator.msSaveBlob(blob, 'Test file.png');
+                } else {
+                    var link = document.createElement('a');
+                    link.download = $('#title').text() + '.png';
+                    link.href = canvas.toDataURL("image/png");
+                    link.click();
+                }
+            }
+            )*/
+	//});	 
 
 
 }
@@ -414,7 +438,7 @@ function ZOH_pade1_fr(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart5 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -446,7 +470,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart5.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -457,7 +481,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart6 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -489,14 +513,15 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart6.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	window.print();
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	});	 */
 
 
 }
@@ -564,7 +589,7 @@ function ZOH_pade1_bode(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart7 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -597,7 +622,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart7.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -608,7 +633,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart8 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -641,15 +666,15 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart8.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	
-	window.print();
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	});	 */
 
 
 }
@@ -742,7 +767,7 @@ function FOH_fr(){
 	//}
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart9 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -774,7 +799,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart9.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -785,7 +810,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart10 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -817,14 +842,15 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart10.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	window.print();
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	}); */	
 
 
 }
@@ -913,7 +939,7 @@ function FOH_bode(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart11 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -946,7 +972,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart11.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -957,7 +983,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart12 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -990,14 +1016,15 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart12.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	window.print();
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	}); */	
 
 
 }
@@ -1076,7 +1103,7 @@ function FOH_pade1_fr(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart13 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -1108,7 +1135,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart13.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -1119,7 +1146,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart14 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -1151,16 +1178,16 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart14.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	chart.exportChart({format: "jpg"})
-	
-	window.print();
-	
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
 
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	});	
+ */
 
 }
 
@@ -1238,7 +1265,7 @@ function FOH_pade1_bode(){
 
 document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer1').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer1",
+	var chart15 = new CanvasJS.Chart("chartContainer1",
     {
       animationEnabled: true,
 	  
@@ -1271,7 +1298,7 @@ document.getElementById('chartContainer1').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart15.render();	
 	//document.getElementById("result").style.display = "block";
 	/*document.getElementById("exportChart").style.display = "block";
 	document.getElementById("exportChart").addEventListener("click",function(){
@@ -1282,7 +1309,7 @@ document.getElementById('chartContainer1').style.display  = "block";
 
 //document.getElementById('plotbucket').style.display  = "block"; 
 document.getElementById('chartContainer2').style.display  = "block"; 	
-	var chart = new CanvasJS.Chart("chartContainer2",
+	var chart16 = new CanvasJS.Chart("chartContainer2",
     {
       animationEnabled: true,
 	  
@@ -1315,14 +1342,15 @@ document.getElementById('chartContainer2').style.display  = "block";
        
 	});
 
-	chart.render();	
+	chart16.render();	
 	//document.getElementById("result").style.display = "block";
 	document.getElementById("exportChart").style.display = "block";
-	document.getElementById("exportChart").addEventListener("click",function(){
-	//chart.exportChart({format: "jpg"})
-	
-	window.print();
-	});	
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+	html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    });
+	});	 */
 
 
 }
@@ -1337,3 +1365,40 @@ document.getElementById('chartContainer2').style.display  = "block";
 	format = "jpg";
     document.body.innerHTML = originalContent;
 }*/
+
+
+		 
+
+function saveAs(uri, filename) {
+
+    var link = document.createElement('a');
+
+    if (typeof link.download === 'string') {
+
+        link.href = uri;
+        link.download = filename;
+
+        //Firefox requires the link to be in the body
+        document.body.appendChild(link);
+
+        //simulate click
+        link.click();
+
+        //remove the link when done
+        document.body.removeChild(link);
+
+    } else {
+
+        window.open(uri);
+
+    }
+}
+
+function saveImg(){
+html2canvas(document.querySelector('#plotbucket')).then(function(canvas) {
+
+        saveAs(canvas.toDataURL(), 'Plot.png');
+    }); 
+	
+	
+}
